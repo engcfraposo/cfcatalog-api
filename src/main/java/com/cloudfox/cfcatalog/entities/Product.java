@@ -35,6 +35,12 @@ public class Product implements Serializable{
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant date;
 	
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	private Instant createdAt;
+	
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	private Instant updatedAt;
+	
 	@ManyToMany
 	@JoinTable(name = "tb_product_category",
 		joinColumns = @JoinColumn(name = "product_id"),
@@ -52,6 +58,14 @@ public class Product implements Serializable{
 		this.imgUrl = imgUrl;
 		this.date = date;
 		this.categories = categories;
+	}
+	
+	public Instant getCreatedAt() {
+		return createdAt;
+	}
+
+	public Instant getUpdatedAt() {
+		return updatedAt;
 	}
 
 	public Long getId() {

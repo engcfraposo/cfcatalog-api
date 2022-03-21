@@ -30,20 +30,20 @@ public class Category implements Serializable {
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant updatedAt;
 	
-	public Instant getCreatedAt() {
-		return createdAt;
-	}
-
-	public Instant getUpdatedAt() {
-		return updatedAt;
-	}
-	
 
 	public Category() {}
 
 	public Category(Long id, String name) {
 		this.id = id;
 		this.name = name;
+	}
+	
+	public Instant getCreatedAt() {
+		return createdAt;
+	}
+
+	public Instant getUpdatedAt() {
+		return updatedAt;
 	}
 
 	public Long getId() {
@@ -86,7 +86,7 @@ public class Category implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Category other = (Category) obj;
-		return Objects.equals(id, other.id) && Objects.equals(name, other.name);
+		return Objects.equals(id, other.id);
 	}
 	
 	

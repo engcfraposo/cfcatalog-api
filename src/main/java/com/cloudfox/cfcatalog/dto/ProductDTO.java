@@ -118,10 +118,7 @@ public class ProductDTO implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		ProductDTO other = (ProductDTO) obj;
-		return Objects.equals(categories, other.categories) && Objects.equals(date, other.date)
-				&& Objects.equals(description, other.description) && Objects.equals(id, other.id)
-				&& Objects.equals(imgUrl, other.imgUrl) && Objects.equals(name, other.name)
-				&& Objects.equals(price, other.price);
+		return  Objects.equals(id, other.id);
 	}
 	
 	

@@ -54,7 +54,7 @@ public class CategoryDTO implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		CategoryDTO other = (CategoryDTO) obj;
-		return Objects.equals(id, other.id) && Objects.equals(name, other.name);
+		return Objects.equals(id, other.id);
 	}
 	
 	
