@@ -1,0 +1,29 @@
+type Category{
+	id: Int
+	name: String
+}
+
+
+
+input CategoryInput{
+	name: String
+}
+
+input PageContentInput{
+	page: Int,
+	linesPerPage: Int,
+	orderBy: String,
+	direction: String,	
+}
+
+
+type Query {
+	findAll(input: PageContentInput): [Category]
+	findById(id: String!): Category
+}
+
+type Mutation {
+	delete(id: String): String
+	update(id: String, input: CategoryInput): Category
+	insert(id: String, input: CategoryInput): Category
+}
