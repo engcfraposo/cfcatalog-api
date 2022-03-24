@@ -7,7 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 class CfcatalogApiApplicationTests {
 
 	@Test
-	void contextLoads() {
-	}
+	void contextLoads() {}
 
 }

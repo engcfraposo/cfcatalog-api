@@ -48,6 +48,15 @@ public class Product implements Serializable{
 	Set<Category> categories = new HashSet<>();
 	
 	public Product() {}
+	
+	public Product(Long id, String name, String description, Double price, String imgUrl, Instant date) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.imgUrl = imgUrl;
+		this.date = date;
+	}
 
 	public Product(Long id, String name, String description, Double price, String imgUrl, Instant date,
 			Set<Category> categories) {
@@ -60,6 +69,7 @@ public class Product implements Serializable{
 		this.categories = categories;
 	}
 	
+
 	public Instant getCreatedAt() {
 		return createdAt;
 	}
